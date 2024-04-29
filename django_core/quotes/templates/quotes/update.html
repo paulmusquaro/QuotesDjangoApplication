@@ -1,0 +1,38 @@
+{% extends "quotes/base.html" %}
+
+{% block content %}
+<div class="row">
+    <h2>Add Author</h2>
+    <form method="POST" action="{% url 'quotes:insert' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputText1" class="form-label"> Quote</label>
+            {{form.quote}}
+            <span>{{form.errors.quote}}</span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputText2" class="form-label"> Author </label>
+            {{form.author}}
+            <span>{{form.errors.author}}</span>
+        </div>
+        <div class="mb-3">
+            <div>Tags</div>
+            <div>{{form.tags}}</div>
+            <span>{{form.errors.tags}}</span>
+        </div>
+
+        </div>
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %} role="alert">{{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+    </form>
+</div>
+{% endblock %}
+
