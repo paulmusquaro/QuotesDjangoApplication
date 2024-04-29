@@ -40,12 +40,12 @@ This is a Django web application for browsing and managing a collection of quote
    python -m mongo.migration
    ```
 
-5. **Create an Admin User**
+6. **Create an Admin User**
    ```
    python manage.py createsuperuser
    ```
 
-6. **Run the Server**
+7. **Run the Server**
    ```
    python manage.py runserver
    ```
