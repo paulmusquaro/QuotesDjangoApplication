@@ -1,4 +1,4 @@
-# SimpleDjangoApplication
+# QuotesDjangoApplication
 
 ## Overview
 This is a Django web application for browsing and managing a collection of quotes and their respective authors. The application allows users to view quotes, search for quotes by tags, and view detailed information about authors. Registered users can add new authors and quotes to the database.
@@ -10,6 +10,8 @@ This is a Django web application for browsing and managing a collection of quote
 - **Add Quotes and Authors**: Registered users can add new quotes and authors to the database.
 - **Tag-Based Search**: Users can search for quotes based on specific tags.
 - **Pagination**: The quotes list is paginated to enhance user experience and performance.
+- **Password Reset**: If users have forgotten their account password, they can easily reset it by receiving an email.
+- **Changing the Avatar**: Users can change the default account avatar on the corresponding page: `users/profile`.
 
 ## Technologies
 - **Frontend**: HTML, CSS 
